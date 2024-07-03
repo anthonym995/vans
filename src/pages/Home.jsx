@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import bg from "../assets/bg.png";
 const Home = () => {
   return (
     <>
-      <section className="bg-home min-h-[350px] bg-cover py-11 px-6">
+      <section className="bg-cover py-11 px-6" style={{ backgroundImage: `url(${bg})` }}>
         <div className="container mx-auto">
           <h1 className="text-white text-4xl font-bold leading-10 mb-6">
             You got the travel plans, we got he travel vans.
@@ -14,7 +15,9 @@ const Home = () => {
           <Link
             to="vans"
             className="inline-block text-center no-underline bg-[#FF8C38] border-none w-full mt-[27px] py-3 text-white font-bold rounded cursor-pointer transition-transform duration-100 ease-in-out"
-          >  Find your vans</Link>
+          >
+            Find your vans
+          </Link>
         </div>
       </section>
     </>
