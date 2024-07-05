@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const About = () => {
   return (
     <>
-      <section className="">
+      <section className="overflow-y-auto">
         <div className="container-fluid mx-auto">
           <img src={aboutImg} alt="hero-image" className="w-full" />
         </div>
@@ -25,7 +25,7 @@ const About = () => {
             <h2 className="mb-0 py-12 text-2xl font-bold leading-10">
               Your destination is waiting. Your van is ready.
             </h2>
-            <Link className="bg-[#161616] text-white rounded-xl px-4 py-3">Explore our vans</Link>
+            <Link to="/vans" className="bg-[#161616] text-white rounded-xl px-4 py-3">Explore our vans</Link>
           </div>
         </div>
       </section>

@@ -1,37 +1,48 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import  userIcon from "../assets/user.png"
 
 const Header = () => {
+  const activeStyle = {
+    textDecoration: "underline",
+    color: "#161616",
+    fontWeight: "semi-bold",
+  };
   return (
     <>
-      {/* <header className="h-20 flex items-center bg-[#FFF7ED]">
-        <div className="container mx-auto">
-          <div className="flex justify-between items-center">
-            <Link to="/" className="text-xl font-bold">
-              #VANSLIFE
-            </Link>
-            <nav className="">
-              <Link to="/" className="px-3 py-1 text-base font-semibold hover:underline">
-                Home
-              </Link>
-              <Link to="/about" className="px-1 py-2 text-base font-semibold hover:underline">
-                About
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header> */}
-      <header className="bg-[#FFF7ED] text-white p-4">
+      <header className="bg-[#FFF7ED] py-4">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="text-xl font-bold text-black">
             #VANSLIFE
           </Link>
           <nav>
-            <Link to="/" className="px-2 hover:underline text-black font-semibold">
-              Home
-            </Link>
-            <Link to="/about" className="px-2 hover:underline text-black font-semibold">
+            <NavLink
+              to="/host"
+              className="px-3 py-1 hover:underline text-[#4D4D4D] hover:text-[#161616] font-semibold"
+              style={({ isActive }) => (isActive ? activeStyle : null)}
+            >
+              Host
+            </NavLink>
+            <NavLink
+              to="/about"
+              className="px-3 py-1 hover:underline text-[#4D4D4D] hover:text-[#161616] font-semibold"
+              style={({ isActive }) => (isActive ? activeStyle : null)}
+            >
               About
-            </Link>
+            </NavLink>
+            <NavLink
+              to="/vans"
+              className="px-3 py-1 hover:underline text-[#4D4D4D] hover:text-[#161616] font-semibold"
+              style={({ isActive }) => (isActive ? activeStyle : null)}
+            >
+              Vans
+            </NavLink>
+            <NavLink
+              to="/login"
+              className="px-3 py-1 hover:underline text-[#4D4D4D] hover:text-[#161616] font-semibold"
+              style={({ isActive }) => (isActive ? activeStyle : null)}
+            >
+              <img className="w-5 h-5 inline-block" src={userIcon} alt="" />
+            </NavLink>
           </nav>
         </div>
       </header>
