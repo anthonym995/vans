@@ -2,8 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff7ed; /* Light blue for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF8C38; /* Medium blue for the thumb */
+  border-radius: 6px;
+  border: 1px solid #fff7ed; /* Light blue for the thumb border */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #FF8C38; /* Darker blue for the thumb hover */
+}
+
+
+
+
 /* custom-styles.css */
 
+.wrapper {
+  background-color: #fff7ed;
+}
 main {
   background-color: #fff7ed;
 }

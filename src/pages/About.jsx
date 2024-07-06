@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <section className="overflow-y-auto">
-        <div className="container-fluid mx-auto">
+        <div className="container mx-auto">
           <img src={aboutImg} alt="hero-image" className="w-full" />
         </div>
         <div className="container mx-auto">

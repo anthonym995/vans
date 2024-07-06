@@ -19,7 +19,7 @@ const Login = () => {
         <div className=" p-8 rounded-lg w-full">
           <h2 className="text-3xl font-bold mb-8 text-gray-900 text-center mt-6">Sign in to your account</h2>
           <form onSubmit={handleSubmit}>
-            <div className="mt-">
+            <div className="">
               <input
                 type="text"
                 id="email"
@@ -27,7 +27,7 @@ const Login = () => {
                 value={loginFormData.email}
                 placeholder="Email address"
                 onChange={handleChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline rounded-lg rounded-b-none border"
                 required
               />
             </div>
@@ -39,7 +39,7 @@ const Login = () => {
                 value={loginFormData.password}
                 placeholder="Password"
                 onChange={handleChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none w-full rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline rounded-lg rounded-t-none border border-t-0"
                 required
               />
             </div>

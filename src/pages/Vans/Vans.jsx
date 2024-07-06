@@ -79,9 +79,7 @@ const Vans = () => {
             </button>
           ) : null}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {vanElements}
-        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">{vanElements}</div>
       </div>
     </>
   );
