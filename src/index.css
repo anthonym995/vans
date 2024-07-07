@@ -7,6 +7,8 @@
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 4px;
+  /* background-color: #FF8C44; */
+  /* background-color: #FF8C44; */
 }
 
 ::-webkit-scrollbar-track {

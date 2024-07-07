@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, redirect } from "react-router-dom";
 import userIcon from "../assets/user.png";
 
 const Header = () => {
@@ -7,6 +7,12 @@ const Header = () => {
     color: "#161616",
     fontWeight: "semi-bold",
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem("loggedin");
+    return redirect("/login");
+  };
+
   return (
     <>
       <header className="bg-[#FFF7ED] py-4 fixed top-0 z-50 shadow-md w-full mx-auto">
@@ -44,6 +50,13 @@ const Header = () => {
               >
                 <img className="w-5 h-5 inline-block" src={userIcon} alt="" />
               </NavLink>
+
+              <button
+                onClick={handleLogout}
+                className="px-3 py-1 hover:underline text-[#4D4D4D] hover:text-[#161616] font-semibold"
+              >
+                Logout
+              </button>
             </nav>
           </div>
         </div>
